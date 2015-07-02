@@ -1,6 +1,6 @@
 baseurl = "http://enokawa.co/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+languageCode = "ja"
+title = "enokawa.co"
 theme = "angels-ladder"
 
 [permalinks]
