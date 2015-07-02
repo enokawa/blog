@@ -1,0 +1,7 @@
+baseurl = "http://enokawa.co/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "angels-ladder"
+
+[permalinks]
+    post = "/:year/:month/:filename/"
