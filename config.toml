@@ -4,4 +4,9 @@ title = "enokawa.co"
 theme = "angels-ladder"
 
 [permalinks]
-    post = "/:year/:month/:filename/"
+post = "/:year/:month/:filename/"
+
+[Params]
+facebook = "https://facebook.com/naoto.enokawa"
+twitter = "https://twitter.com/enkw_"
+github = "https://github.com/enokawa"
