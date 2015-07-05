@@ -4,10 +4,13 @@ title = "enokawa.co"
 theme = "angels-ladder"
 
 [permalinks]
-post = "/:year/:month/:filename/"
+post = "/:year/:month/:day/:filename/"
 
 [Params]
 facebook = "https://facebook.com/naoto.enokawa"
 twitter = "https://twitter.com/enkw_"
 github = "https://github.com/enokawa"
 author = "Naoto Enokawa"
+profile = "/images/profile.png"
+copyright = "Written by Naoto Enokawa"
+analytics = "UA-64780065-1"

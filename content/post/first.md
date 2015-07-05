@@ -1,13 +1,13 @@
 +++
 date = "2013-10-08T01:51:03+09:00"
-title = "初めての投稿"
 tags = [ "mac" ]
+title = "初めての投稿"
 +++
 
-どうも。文系情報科の３年時エノカワです。
-趣味はDJ、一眼レフです。インフラ触るのが好きです。
-メインマシンはMacbook pro 13inchです。好きなエディタはVimです。
-iTerm, oh my zsh, vimの組み合わせが好きです。でも情弱です。
+どうも。文系情報科の３年時エノカワです。  
+趣味はDJ、一眼レフです。インフラ触るのが好きです。  
+メインマシンはMacbook pro 13inchです。好きなエディタはVimです。  
+iTerm, oh my zsh, vimの組み合わせが好きです。でも情弱です。  
 あまり理解はできていません。
 
 最近、MacbookをLionからMountain Lionにアップデートする際に
@@ -23,8 +23,8 @@ iTerm, oh my zsh, vimの組み合わせが好きです。でも情弱です。
 
 <img src="/images/disk-utility.png">
 
-もうSSDに変えようかなー
-メモリも２G＊２だしwwww
+もうSSDに変えようかなー  
+メモリも２G＊２だしwwww  
 BTOするんだったorz
 
 
