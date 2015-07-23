@@ -1,7 +1,7 @@
 +++
 date = "2014-03-16T00:49:52+09:00"
 tags = ["jawsug", "jawsdays"]
-title = "jawsdays2014"
+title = "JAWS DAYS 2014に参加してきました！"
 
 +++
 
