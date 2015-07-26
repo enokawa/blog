@@ -1,6 +1,6 @@
 baseurl = "http://enokawa.github.io/"
 languageCode = "ja"
-title = "えのやん"
+title = "あしたから本気だす"
 theme = "angels-ladder"
 
 [permalinks]
