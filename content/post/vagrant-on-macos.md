@@ -30,7 +30,7 @@ title = "VagrantでWordPress環境を作る（MacOSX編）"
 ## Boxのインストール
 OSのイメージであるBoxをインストールしてVagrantのセットアップを行います。まず適当なディレクトリを作成します。
 ```sh
-$ mkdir mkdir vagrant
+$ mkdir vagrant
 $ mkdir vagrant/CentOS65
 $ cd vagrant/CentOS65
 ```
@@ -47,7 +47,7 @@ $ vagrant box add centos65 https://github.com/2creatives/vagrant-centos/releases
 
 
 ## OSの起動
-CentOS6.5を起動します。`vagrant ssh`で仮想マシンにsshログインができます。`vagrant init`でVagrantの設定ファイルとなる`Vagrantfile`が生成されます。
+CentOS6.5を起動します。`vagrant init`でVagrantの設定ファイルとなる`Vagrantfile`が生成されます。`vagran up`でOSの起動が行なわれます。
 ```sh
 $ vagrant init centos65
 A `Vagrantfile` has been placed in this directory. You are now
@@ -66,16 +66,20 @@ Bringing machine 'default' up with 'virtualbox' provider...
     .
     .
     .
+```
+
+`vagrant ssh`で対象のホストにsshでログインすることができます。パッケージのアップデートをしておきます。
+```
 $ vagrant ssh
 [vagrant@vagrant-centos65 ~]$
+[vagrant@vagrant-centos65 ~]$ sudo yum update -y
+[vagrant@vagrant-centos65 ~]$ sudo reboot
 ```
 
 
 ## LAMPのインストール/起動
 Apache、MySQL、PHPをインストールします。バージョンや設定などは省略しています。
 ```sh
-[vagrant@vagrant-centos65 ~]$ sudo yum update -y
-[vagrant@vagrant-centos65 ~]$ sudo reboot
 [vagrant@vagrant-centos65 ~]$ sudo yum -y install httpd httpd-devel
 [vagrant@vagrant-centos65 ~]$ sudo yum -y install php php-mysql php-xml php-pear php-pdo php-cli php-mbstring php-gd php-mcrypt php-common php-devel php-bcmath
 [vagrant@vagrant-centos65 ~]$ sudo yum -y install mysql mysql-devel mysql-server
@@ -84,6 +88,7 @@ Apache、MySQL、PHPをインストールします。バージョンや設定な
 [vagrant@vagrant-centos65 ~]$ sudo /etc/init.d/mysqld start
 [vagrant@vagrant-centos65 ~]$ sudo chkconfig mysqld on
 ```
+
 
 ## mysql-serverの設定
 WordPress用にデータベースの設定します。新しく`wordpress`ユーザーを作成します。
@@ -103,14 +108,14 @@ Mac上でWordPressを[公式ページ](https://ja.wordpress.org/)からインス
 <img src="/images/vagrant-on-macos4.png">
 
 
-## クライアントPCとディレクトリの同期
+## ネットワークの設定/クライアントPCとディレクトリの同期
 `Vagrantfile`を編集します。  
 以下の2行の下に
 ```sh
 # config.vm.network "private_network", ip: "192.168.33.10"
 # config.vm.synced_folder "../data", "/vagrant_data"
 ```
-以下の2行を追加します。
+以下の2行を追加します。`~/Desktop/wordpress`の箇所はお手持ちの環境に合わせて設定してください。
 ```sh
 config.vm.network "private_network", ip: "192.168.33.10"
 config.vm.synced_folder "~/Desktop/wordpress", "/var/www/html", owner: "apache", group: "apache"
@@ -119,6 +124,7 @@ config.vm.synced_folder "~/Desktop/wordpress", "/var/www/html", owner: "apache",
 ```sh
 $ vagrant reload
 ```
+
 
 ## ブラウザでアクセスしてみる
 Mac上のブラウザで http://192.168.33.10 にアクセスします。  
