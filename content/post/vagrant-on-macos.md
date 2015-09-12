@@ -102,7 +102,7 @@ mysql> quit;
 ```
 
 ## WordPressのインストール
-Mac上でWordPressを[公式ページ](https://ja.wordpress.org/)からインストールして解凍します。今回はデスクトップ上に展開したいと思います。
+Mac上でWordPressを[公式ページ](https://ja.wordpress.org/)からインストールして解凍します。今回は`/Users/enokawa/vagrant/CentOS65/wordpress`に展開したいと思います。
 <img src="/images/vagrant-on-macos3.png">
 
 <img src="/images/vagrant-on-macos4.png">
@@ -115,10 +115,10 @@ Mac上でWordPressを[公式ページ](https://ja.wordpress.org/)からインス
 # config.vm.network "private_network", ip: "192.168.33.10"
 # config.vm.synced_folder "../data", "/vagrant_data"
 ```
-以下の2行を追加します。`~/Desktop/wordpress`の箇所はお手持ちの環境に合わせて設定してください。
+以下の2行を追加します。`~/vagrant/CentOS65/wordpress`の箇所はお手持ちの環境に合わせて設定してください。
 ```sh
 config.vm.network "private_network", ip: "192.168.33.10"
-config.vm.synced_folder "~/Desktop/wordpress", "/var/www/html", owner: "apache", group: "apache"
+config.vm.synced_folder "~/vagrant/CentOS65/wordpress", "/var/www/html", owner: "apache", group: "apache"
 ```
 その後に`vagrant reload`で設定ファイルを再読み込みします。
 ```sh
