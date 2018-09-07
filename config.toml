@@ -2,6 +2,7 @@ baseurl = "http://blog.enokawa.co/"
 languageCode = "ja-jp"
 title = "あしたから本気だす"
 theme = "angels-ladder"
+disqusShortname = "blog-enokawa-co"
 
 [permalinks]
 post = "/:year/:month/:day/:filename/"
