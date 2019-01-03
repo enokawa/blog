@@ -1,5 +1,5 @@
 +++
-date = "now()"
+date = "2018-06-13T23:02:51+09:00"
 tags = ["aws", "ec2", "autofs"]
 title = "autofsでEFSをマウントする"
 
