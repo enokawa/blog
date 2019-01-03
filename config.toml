@@ -8,7 +8,6 @@ disqusShortname = "blog-enokawa-co"
 post = "/:year/:month/:day/:filename/"
 
 [Params]
-facebook = "https://facebook.com/naoto.enokawa"
 twitter = "https://twitter.com/enkw_"
 github = "https://github.com/enokawa"
 author = "Naoto Enokawa"
